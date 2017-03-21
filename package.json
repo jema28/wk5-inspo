@@ -1,0 +1,27 @@
+{
+  "name": "week5-hibas-angels",
+  "version": "1.0.0",
+  "description": "best API project eva",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN1/week5-hibas-angels.git"
+  },
+  "keywords": [
+    "hiba",
+    "angels",
+    "glory"
+  ],
+  "author": "hiba, matt, jack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN1/week5-hibas-angels/issues"
+  },
+  "homepage": "https://github.com/FACN1/week5-hibas-angels#readme"
+}
