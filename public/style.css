@@ -26,7 +26,8 @@ h1 {
   font: bold 5vw Helvetica;
   color: #099;
   background-color: white;
-  border: 2px solid gray;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 .button-wrap {
@@ -47,7 +48,8 @@ h1 {
   width: calc((100% / 3) - 13.4px);
   padding: 10px 0;
   background-color: white;
-  border: 2px solid gray;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 .tag-button.middle {
@@ -63,7 +65,8 @@ h1 {
 .posts-container {
   margin: 20px;
   font: 18px Helvetica;
-  border: 2px solid gray;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 .stack-post {
