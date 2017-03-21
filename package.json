@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/back-end/tests.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/FACN1/week5-hibas-angels/issues"
   },
-  "homepage": "https://github.com/FACN1/week5-hibas-angels#readme"
+  "homepage": "https://github.com/FACN1/week5-hibas-angels#readme",
+  "devDependencies": {
+    "shot": "^3.4.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  }
 }
