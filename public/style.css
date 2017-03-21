@@ -17,9 +17,10 @@ body {
   background-color: #f0f5f5;
 }
 
+/* HEADER */
+
 h1 {
-  width: calc(100vw - 40px);
-  margin: 20px auto;
+  margin: 20px;
   padding: 20px;
   text-align: center;
   font: bold 5vw Helvetica;
@@ -57,7 +58,19 @@ h1 {
   background-color: #eee;
 }
 
+/* FEED */
+
 .posts-container {
   margin: 20px;
-  font: 20px Helvetica;
+  font: 18px Helvetica;
+  border: 2px solid gray;
+}
+
+.stack-post {
+  padding: 8px;
+  text-align: center;
+}
+
+.stack-post:nth-child(odd) {
+  background-color: white;
 }

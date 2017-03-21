@@ -12,21 +12,24 @@
 <body>
   <header>
     <h1>HIBA FEEDS</h1>
+
+    <!-- buttonz -->
+    <div class="button-wrap">
+      <button data-tag="all" class="tag-button">All</button>
+      <button data-tag="js" class="tag-button middle">JavaScript</button>
+      <button data-tag="node" class="tag-button">Node</button>
+    </div>
   </header>
 
-  <!-- buttons -->
-  <section>
-    <div class="button-wrap">
-      <button class="tag-button">All</button>
-      <button class="tag-button middle">JavaScript</button>
-      <button class="tag-button">Node</button>
-    </div>
+  <!-- feed -->
+  <section id="posts-container" class="posts-container">
+    <div class="stack-post"><a target="_blank" href="http://stackoverflow.com/questions/42931172/testing-function-calls-in-redux-sagas">Testing function calls in redux sagas</a></div>
+    <div class="stack-post"><a target="_blank" href="http://stackoverflow.com/questions/42931171/php-and-mysql-pagination">php and mysql pagination</a></div>
+    <div class="stack-post"><a target="_blank" href="http://stackoverflow.com/questions/42931168/php-logout-redirection-issue">PHP Logout redirection issue</a></div>
   </section>
 
-  <!-- feed -->
-  <section>
-    <div id="posts-container" class="posts-container"></div>
-  </section>
+  <!-- scripts -->
+  <script src="./index.js" type="text/javascript"></script>
 </body>
 
 </html>
