@@ -1,16 +1,19 @@
 var currentTag = 'all';
 
 // array of buttons
-var optionButtons;
+var optionButtons = document.getElementsByClassName('tag-button');
 
-optionButtons.forEach(function(button) {
-  button.addEventListener('click', function(e) {
+for (var i = 0; i < optionButtons.length; i++) {
+  optionButtons[i].addEventListener('click', function(event) {
     // find out which button was clicked
+    var button = event.target;
+    var tag = button.dataset.tag;
     // update the currentTag variable
+    currentTag = tag;
     // after you chose the right opition we show the right data(run getQuestions function)
+    getQuestions(tag, renderToList);
   });
-});
-
+}
 function renderToList(error, items) {
   // items should be an array
   // the function should show them in a list on the page
