@@ -16,7 +16,28 @@ for (var i = 0; i < optionButtons.length; i++) {
 }
 function renderToList(error, items) {
   // items should be an array
+  if (error) {
+    console.log(error);
+    return;
+  }
+
+  var sectionContainer = document.getElementById('posts-container');
+  sectionContainer.innerHTML = '';
+
+  var ul = document.createElement('ul');
+
+  items.forEach(function(question){
+    var listItem = document.createElement('li');
+    var aTitle = document.createElement('a');
+
+    aTitle.setAttribute('href', question.link);
+    aTitle.innerHTML = question.title;
+
+    listItem.appendChild(aTitle);
+    ul.appendChild(listItem);
+  });
   // the function should show them in a list on the page
+  sectionContainer.appendChild(ul);
 }
 
 function getQuestions(tag, callback) {
