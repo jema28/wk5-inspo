@@ -17,6 +17,7 @@ npm run
 git clone && cd
 npm install
 npm test
+npm run coverage
 ```
 
 ## User Stories
