@@ -1,6 +1,6 @@
 /* RESETS */
 
-body, h1, button, div {
+body, h1, button, div, ul, li {
   margin: 0;
   padding: 0;
   border: 0;
@@ -74,6 +74,12 @@ h1 {
   text-align: center;
 }
 
-.stack-post:nth-child(odd) {
+.posts-container li {
+  list-style: none;
+  padding: 8px;
+  text-align: center;
+}
+
+.posts-container li:nth-child(odd) {
   background-color: white;
 }
