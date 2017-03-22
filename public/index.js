@@ -1,9 +1,9 @@
 var currentTag = 'all';
 
 // array of buttons
-var optionButtons = document.getElementsByTagName("button");
+var optionButtons = document.getElementsByClassName('tag-button');
 
-for (var i=0; i < optionButtons.length; i++) {
+for (var i = 0; i < optionButtons.length; i++) {
   optionButtons[i].addEventListener('click', function(event) {
     // find out which button was clicked
     var button = event.target;
