@@ -3,7 +3,7 @@ var url = require('url');
 
 var requestModule = require('request');
 
-var NUM_RESULTS = 2;
+var NUM_RESULTS = 10;
 
 var headers = {
   'html': {'content-type' : 'text/html'},
