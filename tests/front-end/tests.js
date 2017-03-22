@@ -1,7 +1,7 @@
-QUnit.test("a test", function(assert){
-  function name( name){
+QUnit.test("a test", function(assert) {
+  function name(name) {
     return name;
   }
-  var myname ="hiba";
-  assert.equal(myname,"hiba","the same name");
+  var myName = "hiba";
+  assert.equal(myname, "hiba", "should return the same name");
 });
