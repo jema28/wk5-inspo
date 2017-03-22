@@ -1,16 +1,23 @@
-var router = new router();
+var handlers = require('./handlers.js');
 
-var handlers = require('./handlers');
+var router = function(request, response) {
+  // check the url of the request
+  // use the correct handler
+  if (request.url === '/') {
+    handlers.home(request, response);
+  }
+  //if (request.url === '/question') {
+  //  handlers.question(request,response);
+  //}
+  if (request.url === '/style.css') {
+   handlers.style(request,response);
+  }
+  if (request.url === '/index.js') {
+   handlers.index(request,response);
+  }
+  else {
+    handlers.notFound(request, response);
+  }
+};
 
-var routes = {
-    '/'   : handlers.home,
-    '404' : handlers.notFound
-}
-
-module.exports = function(req, res) {
-    if (routes[req.url]) {
-	routes[req.url](req, res);
-    } else {
-	routes[404](req, res);
-    }
-}
+module.exports = router;
