@@ -1,5 +1,4 @@
 # week5-hibas-angels
-
 A very warm welcome to the repository for Hiba's Angels' week 5 project, a stack overflow questions news feed.
 
 ## Outline
@@ -7,14 +6,18 @@ A very warm welcome to the repository for Hiba's Angels' week 5 project, a stack
 - The news feed should refresh automatically
 
 ## Local Install Instructions
+```bash
 git clone && cd
 npm install
 npm run
+```
 
 ## Local Test Instructions
+```bash
 git clone && cd
 npm install
 npm test
+```
 
 ## User Stories
 
