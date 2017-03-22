@@ -1,6 +1,7 @@
 const test = require('tape');
 const shot = require('shot');
 const router = require('../../src/router.js');
+
 test('Initialise', (t) => {
   var num = 2;
   t.equal(num, 2, 'Should return 2');
@@ -21,7 +22,6 @@ test('Home route', function(t) {
 });
 
 test('Unknown route test', function(t) {
-
   const reqOptions={
     method: 'get',
     url: '/hiba'
