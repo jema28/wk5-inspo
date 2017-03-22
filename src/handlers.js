@@ -1,10 +1,13 @@
 var fs = require('fs');
 var url = require('url');
 
+var requestModule = require('request');
+
 var headers = {
   'html': {'content-type' : 'text/html'},
   'css': {'content-type' : 'text/css'},
   'js': {'content-type' : 'application/js'},
+  'json': {'content-type' : 'application/json'},
   'plain': {'content-type' : 'text/plain'}
 };
 
@@ -44,13 +47,34 @@ handlers.index = function(request, response) {
 }
 
 handlers.questions = function(request, response) {
+  // get tag
   var parsedURL = url.parse(request.url, true);
   var tag = parsedURL.query.tag;
 
-  // make request
+  var tags = {
+    'all': '',
+    'js': '&tagged=js',
+    'node': '&tagged=nodejs'
+  };
 
-  response.writeHead(200, headers.plain);
-  response.end('sick');
+  // make request
+  var stackURL = 'https://api.stackexchange.com/2.2/questions?order=desc&sort=creation&site=stackoverflow' + tags[tag];
+
+  var reqOptions = {
+    uri: stackURL,
+    gzip: true /* EFFING HELL */
+  }
+
+  requestModule(reqOptions, function(error, res, body) {
+    if (error) {
+      response.writehead(500, headers.plain);
+      response.end('Server error! Holy moly!');
+    }
+
+    response.writeHead(200, headers.json);
+    response.end(body);
+  });
+
 }
 
 handlers.notFound = function(request, response) {
