@@ -1,4 +1,4 @@
-var mockData = [{
+var mockRenderData = [{
     tags: [
       "php",
       "type-conversion"
