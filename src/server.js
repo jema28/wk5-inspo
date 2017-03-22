@@ -1,5 +1,4 @@
 var http = require('http');
-var handlers = require('./handlers.js');
 var router = require('./router.js');
 var PORT = process.env.port || 4000;
 
