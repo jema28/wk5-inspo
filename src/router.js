@@ -10,10 +10,10 @@ var router = function(request, response) {
   //  handlers.question(request,response);
   //}
   else if (request.url === '/style.css') {
-   handlers.style(request,response);
+    handlers.style(request,response);
   }
   else if (request.url === '/index.js') {
-   handlers.index(request,response);
+    handlers.index(request,response);
   }
   else {
     handlers.notFound(request, response);
