@@ -10,7 +10,7 @@ var router = function(request, response) {
     handlers.home(request, response);
   }
   else if (parsedURL.pathname === '/questions') {
-   handlers.questions(request,response);
+    handlers.questions(request,response);
   }
   else if (request.url === '/style.css') {
     handlers.style(request,response);
