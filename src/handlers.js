@@ -1,14 +1,16 @@
 var fs = require('fs');
+var url = require('url');
 
 var headers = {
   'html': {'content-type' : 'text/html'},
   'css': {'content-type' : 'text/css'},
   'js': {'content-type' : 'application/js'},
+  'plain': {'content-type' : 'text/plain'}
 };
 
 var handlers = {};
 
-handlers.home = function(require, response) {
+handlers.home = function(request, response) {
   response.writeHead(200, headers.html);
   fs.readFile(__dirname + '/../public/index.html', function(error,file) {
     if (error) {
@@ -41,8 +43,18 @@ handlers.index = function(request, response) {
  });
 }
 
+handlers.questions = function(request, response) {
+  var parsedURL = url.parse(request.url, true);
+  var tag = parsedURL.query.tag;
+
+  // make request
+
+  response.writeHead(200, headers.plain);
+  response.end('sick');
+}
+
 handlers.notFound = function(request, response) {
-  response.writeHead(404, headers);
+  response.writeHead(404, headers.plain);
   response.end('Resource not found');
 }
 
