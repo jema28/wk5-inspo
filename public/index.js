@@ -22,4 +22,17 @@ function renderToList(error, items) {
 function getQuestions(tag, callback) {
   // tag is e.g. 'all' or 'js'
   // callback fires after response is received
+  var url = '/questions?tag=' + tag;
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      callback(null, JSON.parse(xhr.responseText));
+    }
+    else if (xhr.status === 500) {
+      var errorMessage = xhr.responseText;
+      callback(errorMessage, null);
+    }
+  }
+  xhr.open('GET', url);
+  xhr.send();
 }
