@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "node tests/back-end/tests.js | tap-spec",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "coverage": "cd ./tests && istanbul cover ./back-end/tests.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/FACN1/week5-hibas-angels#readme",
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "shot": "^3.4.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3"
