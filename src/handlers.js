@@ -74,7 +74,6 @@ handlers.questions = function(request, response) {
     response.writeHead(200, headers.json);
     response.end(body);
   });
-
 }
 
 handlers.notFound = function(request, response) {
