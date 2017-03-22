@@ -8,9 +8,6 @@ optionButtons.forEach(function(button) {
     // find out which button was clicked
     // update the currentTag variable
     // after you chose the right opition we show the right data(run getQuestions function)
-    getQuestions(e.target.tag, function(err, response) {
-      console.log(response);
-    });
   });
 });
 
