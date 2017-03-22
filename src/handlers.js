@@ -3,6 +3,8 @@ var url = require('url');
 
 var requestModule = require('request');
 
+var NUM_RESULTS = 2;
+
 var headers = {
   'html': {'content-type' : 'text/html'},
   'css': {'content-type' : 'text/css'},
@@ -71,8 +73,10 @@ handlers.questions = function(request, response) {
       response.end('Server error! Holy moly!');
     }
 
+    // format and send response
+    var data = JSON.parse(body).items.slice(0, NUM_RESULTS);
     response.writeHead(200, headers.json);
-    response.end(body);
+    response.end(JSON.stringify(data));
   });
 }
 
