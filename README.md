@@ -23,8 +23,16 @@ npm run coverage
 ```
 
 ## User Stories
-As a **user looking for the most recent stackoverflow questions**
-> I want to 
+As a **user looking for stackoverflow questions**
+> I want to navigate to your website
+
+> So that I can see a list of the most recently-asked questions
+
+As a **user looking for questions on a specific topic**
+> I want to be able to select a topic on the page
+
+> So that I can get a list of questions on that topic alone
+
 
 ## TODO
 - Add API key to address throttling issues
