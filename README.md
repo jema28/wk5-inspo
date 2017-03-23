@@ -7,22 +7,36 @@ A very warm welcome to the repository for Hiba's Angels' week 5 project, a stack
 
 ## Local Install Instructions
 ```bash
-git clone && cd
+git clone https://github.com/FACN1/week5-hibas-angels.git
+cd week5-hibas-angels
 npm install
-npm run
+npm start
 ```
 
 ## Local Test Instructions
 ```bash
-git clone && cd
+git clone https://github.com/FACN1/week5-hibas-angels.git
+cd week5-hibas-angels
 npm install
 npm test
 npm run coverage
 ```
 
 ## User Stories
+As a **user looking for stackoverflow questions**
+> I want to navigate to your website
 
-## Useful things learned
+> So that I can see a list of the most recently-asked questions
+
+As a **user looking for questions on a specific topic**
+> I want to be able to select a topic on the page
+
+> So that I can get a list of questions on that topic alone
+
+
+## TODO
+- Add API key to address throttling issues
 
 ## Stretch Goals
 - Heroku
+- Automatic feed refresh
