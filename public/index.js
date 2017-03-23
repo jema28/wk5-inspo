@@ -1,4 +1,4 @@
-(function() {
+var hibaMain = (function() {
   var currentTag = 'all';
 
   // array of buttons
@@ -61,7 +61,6 @@
   }
 
   return {
-    renderToList: renderToList,
-    getQuestions: getQuestions
+    renderToList: renderToList
   }
 })();
