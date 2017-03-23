@@ -33,6 +33,10 @@ As a **user looking for questions on a specific topic**
 
 > So that I can get a list of questions on that topic alone
 
+As a **user whose focus flits regularly between different tasks**
+> I want to be able to look back at the screen after a period of distraction and still see the most recent posts instead of outdated ones
+
+> So that I can rest assured that I am staying abreast of the latest questions which have been posted
 
 ## TODO
 - Add API key to address throttling issues
