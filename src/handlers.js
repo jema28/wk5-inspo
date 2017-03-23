@@ -16,34 +16,37 @@ var headers = {
 var handlers = {};
 
 handlers.home = function(request, response) {
-  response.writeHead(200, headers.html);
   fs.readFile(__dirname + '/../public/index.html', function(error,file) {
     if (error) {
-      console.log(error);
+      response.writeHead(500, headers.plain);
+      response.end('something went wrong!');
       return;
     }
+    response.writeHead(200, headers.html);
     response.end(file);
  });
 }
 
 handlers.style = function(request, response) {
-  response.writeHead(200, headers.css);
   fs.readFile(__dirname + '/../public/style.css', function(error,file) {
     if (error) {
-      console.log(error);
+      response.writeHead(500, headers.plain);
+      response.end('something went wrong!');
       return;
     }
+    response.writeHead(200, headers.css);
     response.end(file);
  });
 }
 
 handlers.index = function(request, response) {
-  response.writeHead(200, headers.js);
   fs.readFile(__dirname + '/../public/index.js', function(error,file) {
     if (error) {
-      console.log(error);
+      response.writeHead(500, headers.plain);
+      response.end('something went wrong!');
       return;
     }
+    response.writeHead(200, headers.js);
     response.end(file);
  });
 }
