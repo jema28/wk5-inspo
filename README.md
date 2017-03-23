@@ -7,14 +7,16 @@ A very warm welcome to the repository for Hiba's Angels' week 5 project, a stack
 
 ## Local Install Instructions
 ```bash
-git clone && cd
+git clone https://github.com/FACN1/week5-hibas-angels.git
+cd week5-hibas-angels
 npm install
-npm run
+npm start
 ```
 
 ## Local Test Instructions
 ```bash
-git clone && cd
+git clone https://github.com/FACN1/week5-hibas-angels.git
+cd week5-hibas-angels
 npm install
 npm test
 npm run coverage
