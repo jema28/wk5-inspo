@@ -23,8 +23,12 @@ npm run coverage
 ```
 
 ## User Stories
+As a **user looking for the most recent stackoverflow questions**
+> I want to 
 
-## Useful things learned
+## TODO
+- Add API key to address throttling issues
 
 ## Stretch Goals
 - Heroku
+- Automatic feed refresh
